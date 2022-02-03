@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&family=Palanquin+Dark&family=Poppins:wght@500;700;900&family=Roboto:wght@400;500;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+.nav-item{
+    position: relative;
+}
+.nav-item::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    background: #6C63FF;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 220ms ease-in;
+}
+.nav-item:hover::after {
+    transform-origin: left;
+    transform: scaleX(1); 
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
